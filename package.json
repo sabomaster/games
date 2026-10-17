@@ -1,0 +1,26 @@
+{
+  "name": "games",
+  "version": "0.13.0",
+  "description": "Browser games. Test Driver: a driving sim with realistic physics — recover the car from ice, a tyre blowout or an obstacle.",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve@14.2.4 . -l 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabomaster/games.git"
+  },
+  "homepage": "https://github.com/sabomaster/games#readme",
+  "keywords": [
+    "game",
+    "driving",
+    "simulator",
+    "threejs",
+    "webgl"
+  ],
+  "author": "sabomaster",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  }
+}
