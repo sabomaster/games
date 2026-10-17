@@ -4,7 +4,8 @@
   "description": "Browser games. Test Driver: a driving sim with realistic physics — recover the car from ice, a tyre blowout or an obstacle.",
   "private": true,
   "scripts": {
-    "start": "npx --yes serve@14.2.4 . -l 3000"
+    "build": "node scripts/build.mjs",
+    "start": "npx --yes serve@14.2.4 dist -l 3000"
   },
   "repository": {
     "type": "git",
