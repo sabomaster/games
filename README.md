@@ -6,8 +6,19 @@
 
 Test Driver is a browser driving sim with realistic physics. At speed, the road turns to ice, a tyre blows out or cargo blocks your lane. Keep the car on the road, bring it back to a steady line and earn a score and medal. Snow, rain, night and a cockpit with working gauges.
 
-- **Play:** open [`test-driver/index.html`](test-driver/index.html) in a desktop browser with WebGL 2 (Chrome, Edge, Firefox, Safari). An internet connection is needed on first start: three.js, lil-gui and the car model load from a CDN.
+- **Play:** run `npm start` (Node 18+, no packages to install) and open http://localhost:3000/ in a desktop browser with WebGL 2 (Chrome, Edge, Firefox, Safari). No internet connection is needed: three.js and lil-gui are bundled into [`test-driver/index.html`](test-driver/index.html), and the car model is in [`test-driver/assets/`](test-driver/assets/).
+  Opening `index.html` directly from disk also works, but browsers block loading the car model from a file, so the simpler built-in car is used.
 - **Manual:** [`test-driver/Test-Driver-Manual.pdf`](test-driver/Test-Driver-Manual.pdf)
+
+### Project layout
+
+| Path | What it is |
+|---|---|
+| `test-driver/index.html` | The game: one self-contained file (game code + three.js 0.169.0 + lil-gui 0.19.2) |
+| `test-driver/assets/CarConcept.glb` | Car model (CC BY 4.0, see `CarConcept-LICENSE.txt`) |
+| `test-driver/src/test-driver.source.html` | Readable source of the game (loads three.js and lil-gui from a CDN via an import map) |
+| `scripts/build.mjs` | `npm run build`: copies the game, model, manual and cover to `dist/` |
+| `scripts/serve.mjs` | `npm start`: tiny local web server (Node built-ins only), serves `dist/` or `test-driver/` |
 
 ### Controls
 
